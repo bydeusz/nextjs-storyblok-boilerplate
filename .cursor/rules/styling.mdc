@@ -1,0 +1,47 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Tailwind CSS and general styling guidelines
+globs: "**/*.{js,jsx,ts,tsx}"
+alwaysApply: true
+---
+
+# Tailwind CSS Styling Guidelines
+
+## Class Organization
+
+- Group Tailwind classes by category (layout, spacing, typography, colors, etc.)
+- Use consistent ordering: layout → sizing → spacing → typography → colors → effects
+- Example: `flex flex-col w-full max-w-md p-4 text-sm font-medium text-gray-800 bg-white rounded-lg shadow-md`
+
+## Responsive Design
+
+- Mobile-first approach: start with base styles, then add responsive variants
+- Use responsive prefixes consistently: `sm:`, `md:`, `lg:`, `xl:`, `2xl:`
+- Example: `p-2 sm:p-4 md:p-6 lg:p-8`
+
+## Component Patterns
+
+- Extract repeated class combinations into components
+- Use composition over inheritance
+
+## Custom Utilities
+
+- Extend Tailwind's theme in `tailwind.config.js` rather than using arbitrary values
+- Use semantic color names in the theme configuration
+- Prefer Tailwind's built-in utilities over custom CSS when possible
+
+## Performance
+
+- Use PurgeCSS (built into Tailwind v2+) to remove unused styles
+- Consider using `@layer` directives to organize custom styles
+
+## Accessibility
+
+- Ensure text has sufficient color contrast (WCAG AA compliance)
+- Use appropriate semantic HTML elements
+- Include proper aria attributes when necessary
+- Test with screen readers and keyboard navigation

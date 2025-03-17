@@ -1,0 +1,56 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Next.js project structure and organization
+globs: "**/*.{js,jsx,ts,tsx}"
+alwaysApply: true
+---
+
+# Next.js Project Structure Guidelines
+
+## Directory Organization
+
+- Use the App Router pattern with src/app directory
+- Organize routes logically with nested folders
+- Use route groups (folders in parentheses) for logical organization without affecting URL structure
+- Keep page components focused on layout and composition, not business logic
+
+## API Routes
+
+- Place API routes in app/api directory
+- Organize API routes to mirror frontend routes when applicable
+- Implement proper error handling and status codes
+- Use middleware for cross-cutting concerns like authentication
+
+## State Management
+
+- Use React Context for global state when needed
+- Keep state as close to where it's used as possible
+- Use URL state for shareable UI state
+- Consider using tanstack query for client side caching to minimize api calls
+
+## File Naming Conventions
+
+- Use page.tsx for route components
+- Use layout.tsx for layout components
+- Use loading.tsx for loading states
+- Use error.tsx for error states
+- Use not-found.tsx for 404 pages
+- Use route.tsx for API routes
+- Use middleware.ts for middleware
+
+## Configuration
+
+- Keep Next.js configuration in next.config.ts
+- Use environment variables with proper typing
+- Configure image domains for next/image
+
+## Static Assets
+
+- Place static assets in the public directory
+- Use the src/assets directory for imported assets
+- Optimize images with next/image
+- Use next/font for font optimization

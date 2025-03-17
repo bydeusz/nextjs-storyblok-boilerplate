@@ -1,0 +1,69 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: Storyblok integration guidelines for Next.js
+globs: "**/*.{js,jsx,ts,tsx}"
+alwaysApply: true
+---
+
+# Storyblok Integration Guidelines
+
+## Setup and Configuration
+
+- Storyblok is used as a headless cms setup for building websites
+- Use the official Storyblok SDK for React/Next.js
+- Configure Storyblok API keys in environment variables
+- Implement proper preview mode configuration
+- Set up proper webhook handling for content updates
+
+## Component Structure
+
+- Layout components like a hero, team overview, contact form, faq, can be found in the /src/componets folder and should always be created here
+- Reusable components like buttons, text, input fields and headings can be found in the /src/ui folder and should always be created here.
+- Implement proper TypeScript types for Storyblok content
+- Keep Storyblok-specific logic separate from UI components when possible
+
+## Data Fetching
+
+- Implement proper caching strategies for Storyblok API calls
+- Use ISR (Incremental Static Regeneration) for Storyblok content
+- Implement proper revalidation strategies
+- Use Storyblok's GraphQL API for complex queries when appropriate
+
+## Rich Text Rendering
+
+- Implement proper rich text rendering with Storyblok's rich text resolver
+- Create custom renderers for Storyblok's rich text components
+- Handle nested components within rich text properly
+- Implement proper image optimization within rich text
+
+## Asset Handling
+
+- Use Next.js Image component with Storyblok assets
+- Implement proper image transformations
+- Handle responsive images properly
+- Implement proper video embedding
+
+## Preview Mode
+
+- Implement proper preview mode with Storyblok's Visual Editor
+- Handle authentication for preview mode
+- Implement proper real-time updates in preview mode
+- Handle draft content properly
+
+## SEO
+
+- Extract SEO metadata from Storyblok content
+- Implement proper meta tags with Next.js metadata API
+- Handle dynamic SEO content
+- Implement proper structured data
+
+## Error Handling
+
+- Implement proper error handling for Storyblok API failures
+- Create fallback content for missing Storyblok components
+- Handle content validation errors
+- Implement proper logging for Storyblok-related errors

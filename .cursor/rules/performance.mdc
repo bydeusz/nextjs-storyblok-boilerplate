@@ -1,0 +1,68 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+---
+description: Next.js performance optimization guidelines
+globs: "**/*.{js,jsx,ts,tsx}"
+alwaysApply: true
+---
+
+# Next.js Performance Optimization Guidelines
+
+## Server Components
+
+- Use React Server Components (RSC) for non-interactive UI
+- Keep Client Components as small as possible
+- Use the "use client" directive only when necessary
+- Avoid mixing server and client code in the same component
+
+## Data Fetching
+
+- Implement proper fetch caching strategies
+- Use React Suspense for loading states
+- Implement stale-while-revalidate patterns when appropriate
+- Consider using SWR or TanStack Query for client-side data fetching
+- Use parallel data fetching when possible
+
+## Rendering Strategies
+
+- Use Static Site Generation (SSG) for content that rarely changes
+- Use Incremental Static Regeneration (ISR) for content that changes occasionally
+- Use Server-Side Rendering (SSR) only when necessary
+- Implement proper caching headers
+
+## Code Splitting
+
+- Use dynamic imports for large components
+- Implement proper code splitting with next/dynamic
+- Use the "loading" prop with next/dynamic for loading states
+- Consider using import() for conditional imports
+
+## Image Optimization
+
+- Always use next/image for images
+- Implement proper sizes attribute for responsive images
+- Use proper quality settings for images
+- Implement proper priority for above-the-fold images
+- Use proper placeholder strategies (blur, empty, etc.)
+
+## Font Optimization
+
+- Use next/font for font optimization
+- Implement proper font display strategies
+- Preload critical fonts
+
+## Bundle Optimization
+
+- Keep dependencies minimal and up-to-date
+- Use bundle analyzer to identify large dependencies
+- Implement proper tree shaking
+- Consider using lightweight alternatives for large libraries
+
+## Edge Runtime
+
+- Consider using Edge Runtime for global performance
+- Implement proper edge caching strategies
+- Use middleware at the edge when appropriate
